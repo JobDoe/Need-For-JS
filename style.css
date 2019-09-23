@@ -1,0 +1,8 @@
+.hide {
+	display: none;
+}
+.car {
+	width: 56px;
+	height: 100px;
+	background: transparent url('./images/car-police-alt.png') center/cover no-repeat;
+}
