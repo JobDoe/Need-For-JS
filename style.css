@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: #00aa33;
 }
 ol, ul {
 	list-style: none;
@@ -45,7 +46,73 @@ table {
 	GAME STYLES
 */
 .hide {
-	display: none;
+	display: none!important;
+}
+.mute {
+	z-index: 100;
+	padding: 1rem 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(50% - 190px);
+	background: #00000055;
+	font: normal normal 500 20px/25px sans-serif;
+	color: skyblue;
+	text-align: center;
+	cursor: pointer;
+}
+.score, .bestScore {
+	z-index: 100;
+	padding: 1rem 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(50% - 190px);
+	background: #00000055;
+	font: normal normal 500 20px/25px sans-serif;
+	color: skyblue;
+	text-align: center;
+}
+.bestScore {
+	top: auto;
+	right: 0;
+	bottom: 0;
+}
+.start {
+	box-sizing: border-box;
+	z-index: 100;
+	padding: 0.5rem;
+	/* box-shadow: 0 0 200px 200px #000000aa; */
+	/* position: absolute; */
+	top: calc(50% - 40px);
+	left: calc(50% - 150px);
+	width: 300px;
+	height: max-content;
+	border-bottom: 1px solid gray;
+	background: steelblue;
+	font: normal normal 700 20px/40px sans-serif;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.start:hover {
+	color: yellowgreen;
+}
+.modes {
+	box-sizing: border-box;
+	z-index: 100;
+	position: absolute;
+	top: calc(50% - 86px);
+	left: calc(50% - 150px);
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 200px 200px #000000aa;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .car, .enemy {
@@ -54,15 +121,17 @@ table {
 	left: calc(50% - 56px / 2);
 	width: 56px;
 	height: 100px;
-	background: transparent url('./images/car-police-alt.png') center/cover no-repeat;
+	background: transparent url('./images/car-police-alt.png') center/contain no-repeat;
 }
 .enemy {
-	background: transparent url('./images/enemy.png') center/cover no-repeat;
+	background-image: url('./images/enemy1.png');
 }
 
 .gameArea {
 	position: relative;
 	margin: 0 auto;
+	border-right: 40px solid gray;
+	border-left: 40px solid gray;
 	width: 300px;
 	height: 100%;
 	background: #505050;
